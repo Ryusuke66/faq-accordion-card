@@ -1,0 +1,172 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    color: hsl(240, 6%, 50%);
+}
+
+.card {
+    width: 935px;
+    height: 500px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    position: relative;
+    border-radius: 25px;
+}
+
+.pic {
+    background: url("images/bg-pattern-desktop.svg") no-repeat;
+    background-position: 115% 70%;
+    overflow: hidden;
+}
+
+.pic .first-image {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.pic .first-image img {
+    position: absolute;
+    left: -80px;
+}
+
+.pic img:nth-child(2) {
+    position: absolute;
+    top: 200px;
+    left: -92px;
+}
+
+.desc {
+    padding:60px 50px;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.header {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: hsl(238, 29%, 16%);
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: hsl(237, 12%, 33%);
+}
+
+.question:hover {
+    cursor: pointer;
+    color: hsl(14, 88%, 65%);
+    transition: .1s;
+}
+
+.open {
+    color: hsl(238, 29%, 16%);
+    font-weight: 700;
+}
+
+.arrow {
+    transition: .3s;
+}
+
+.up {
+    transform: rotate(180deg);
+}
+
+.answer {
+    margin-top: 15px;
+    font-size: 14px;
+    display: none;
+}
+
+hr {
+    border: 1px solid hsl(240, 5%, 91%);
+    margin: 20px 0;
+}
+
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+    position: fixed;
+    bottom: -50px;
+    height: 40px;
+    width: 100%;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 1024px) {
+    .card {
+        transform: scale(0.88);
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .card {
+        transform: scale(0.85);
+    }
+    .desc {
+        padding: 30px 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        transform: scale(0.85);
+        display: block;
+        height: 650px;
+    }
+
+    .pic {
+        height: 24%;
+        overflow: visible;
+        background-size: 70%;
+        background-position: 50% 140%;
+    }
+
+    .pic .first-image {
+        overflow: visible;
+    }
+
+    .pic .first-image img {
+        max-width: 70%;
+        left: 50%;
+        bottom: 75px;
+        transform: translateX(-50%);
+    }
+
+    .pic img:nth-child(2) {
+        top: -45px;
+    left: 50px;
+    max-width: 30%;
+    }
+
+    .desc {
+        padding: 0px 30px;
+    }
+
+    .header {
+        text-align: center;
+        font-size: 35px;
+        margin-bottom: 30px;
+
+    }
+}
